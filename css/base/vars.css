@@ -1,0 +1,22 @@
+:root {
+    --text-color: #1E1E1E;
+    --accent: #E58411;
+    --text-muted: #8D8D8D;
+    --text-card-darkblue: #0D1B39;
+
+    --header-text-color: #fff;
+
+    --font-family: "Syne", sans-serif;
+    --second-family: "Nunito", sans-serif;
+
+    /* Project colors */
+	--primary-color: #000;
+	--secondary-color: rgb(233, 255, 97);
+	--accent: rgba(223, 247, 9, 0.95);
+	--subtext-color: #999;
+	--white-transparent-1: rgba(255, 255, 255, 0.5);
+	--white-transparent-2: rgba(255, 255, 255, 0.1);
+	--background-color-1: #fff;
+	--background-color-2: #edf2f6;
+	--background-color-3: #e9e9e9;
+}

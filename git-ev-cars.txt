@@ -1,0 +1,9 @@
+echo "# EV-Cars" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/Kovalchuk-Alexandr/EV-Cars.git
+git push -u origin master
+
+https://kovalchuk-alexandr.github.io/EV-Cars/

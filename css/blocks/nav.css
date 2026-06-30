@@ -1,0 +1,119 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    
+    border-radius: 10px;
+    padding: 18px;
+    height: 100px;
+
+    -webkit-backdrop-filter: blur(23px);
+    backdrop-filter: blur(23px);
+    background: var(--white-transparent-1);
+}
+
+.nav__row {
+    display: grid;
+    grid-template-columns: 1fr minmax(416px, 1fr) 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav__list {
+    padding: 8px 12px;
+
+    justify-self: start;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+}
+
+.nav__link {
+    position: relative;
+    text-decoration: none;
+    
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;           /* ← по умолчанию прижат к правому краю */
+    left: auto;         /* ← при наведении будет отжат от левого края */
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+    left: 0;            /* ← при hover переключаемся на левый край */
+    right: auto;        /* ← при hover отключаем прижатие к правому краю */
+    width: 100%;
+}
+
+.nav__logo {
+    text-align: center;
+    justify-self: center;
+}
+
+.nav__btn {
+    justify-self: end;
+}
+
+.nav__btn-img {
+    width: 14px;
+    height: 18px;
+    flex-shrink: 0;
+
+}
+
+.nav__btn-set {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Media */
+@media (max-width: 1049px) {
+    /* .nav {padding-bottom: 80px;}
+
+    .nav__row {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    } */
+}
+
+@media (max-width: 480px) {
+    .nav {padding: 30px; padding-bottom: 60px;}
+
+    .nav__row {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .nav__list {display: none;}
+
+    .nav__logo {
+        width: 260px;
+        height: 19px;
+    }
+    .nav__btn-set {
+        flex-direction: row;
+        width: 100%;
+        min-width: 260px;
+    }
+}

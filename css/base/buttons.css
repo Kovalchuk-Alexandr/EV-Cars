@@ -1,0 +1,154 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    appearance: none;
+    padding: 18px 24px;
+    /* border: 1px solid var(--black);*/
+    border-radius: 10px;
+    /* width: 157px;
+    height: 58px; */
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    cursor: pointer;
+
+    outline: 1px solid rgba(168, 168, 168, 0.25);
+    outline: 1px solid rgba(16, 16, 16, 0.6);
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in;
+}
+
+.button:active, .button--active {
+    box-shadow: inset 0px 0px 5px rgba(167, 167, 167, 0.3);
+}
+
+.button:hover {
+    outline: 1px solid rgba(168, 168, 168, 0.25);
+    box-shadow: inset 0px 0px 5px rgba(167, 167, 167, 0.3);
+    background: var(--accent);
+}
+
+.button-dark {
+    color: var(--white);
+    background: var(--black);
+
+    outline: 1px solid rgba(16, 16, 16, 0.6);
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in;
+}
+
+.button-dark:active, .button-dark--active {
+    box-shadow: inset 0px 0px 5px rgba(167, 167, 167, 0.3);
+}
+
+.button-dark:hover {
+    color: var(--black);
+    /* box-shadow: inset 0px 0px 5px rgba(167, 167, 167, 0.3);*/
+    /* background: var(--cream);*/
+}
+
+.button-set {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+}
+
+.button-inset {
+	width: 124px;
+    height: 41px;
+    appearance: none;
+    padding: 8px 14px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border: none;
+	border-radius: 100px;
+	text-align: center;
+	outline: 1px solid rgba(16, 16, 16, 0.6);
+    /* background: #f0f0f0;*/
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--black);
+
+    transition: all 0.3s ease-in;
+}
+
+.dark .button-inset {
+	background: #555555;
+	color: #eee;
+	box-shadow: inset 0px 0px 3px rgba(255, 255, 255, 0.2);
+}
+
+.button-inset--small {width: 70px;}
+.button-inset--middle {width: 100px;}
+.button-inset--full {width: unset;}
+
+.button-inset:active, .button-inset--active {
+    box-shadow: inset 0px 0px 5px rgba(167, 167, 167, 0.3);
+}
+
+.button-inset:hover {
+    outline: 1px solid rgba(168, 168, 168, 0.25);
+    background: var(--cream);
+}
+.dark .button-inset:hover {outline: 1px solid rgba(255, 255, 255, 0.25);}
+
+.button-inset:disabled {
+	background: #e0e0e0;
+	color: #a0a0a0;
+	cursor: not-allowed;
+	box-shadow: none;
+	outline: none;
+}
+
+.btn {
+    padding: 17px 36px 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50px;
+    min-width: 150px;
+    height: 50px;
+
+    background: var(--efbd68);
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--333333);
+
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color:var(--333333);
+}
+
+.button-text {white-space: nowrap;}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: unset;
+        padding: 11px 21px 12px;
+        min-width: 120px;
+        height: 40px;
+    }
+}
