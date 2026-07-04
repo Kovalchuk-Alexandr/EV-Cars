@@ -11,45 +11,124 @@
 	<link rel="apple-touch-icon" sizes="56x56" href="./img/favicon/ev-logo.svg">
 </head>
 <body>
+    <!-- SVG-Sprite  -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="arrow-right-top" width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
+            <path d="M1.21221 0H13.6977V12.4854H12.297V2.39516L0.994515 13.6977L0 12.7037L11.3031 1.40065H1.21221V0Z"/>
+        </symbol>
+    </svg>
 
-    <div class="hero">
+    <div class="nav__wrapper">
         <div class="container container--wide">
             <nav class="nav">
-                <!-- <div class="nav__row"> -->
-                    <a href="#!" class="nav__logo">
-                        <img src="./img/logo.png" srcset="./img/logo@2x.png x2" alt="Alt">
-                    </a>
+                <a href="index.html" class="nav__logo">
+                    <img src="./img/logo/logo.png" srcset="./img/logo/logo@2x.png 2x" alt="Logo">
+                </a>
 
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#!" class="nav__link">Home</a></li>
-                        <li class="nav__item"><a href="#!" class="nav__link">Products</a></li>
-                        <li class="nav__item"><a href="#!" class="nav__link">Features</a></li>
-                        <li class="nav__item"><a href="#!" class="nav__link">Gear Shop</a></li>
-                    </ul>
-                    
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#!" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="#!" class="nav__link">Features</a></li>
+                    <li class="nav__item"><a href="#!" class="nav__link">Gear Shop</a></li>
+                </ul>
+                
+                <div class="nav__btn-set">
+                    <button class="nav__btn ">
+                        <a href="#!" class="button">
+                            <span class="button-text">Order Now</span>
+                            <div class="nav__btn-img">
+                                <svg class="icon--arrow-right-top">
+                                    <use href="#arrow-right-top"></use>
+                                </svg>
+                                <!-- <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.21221 0H13.6977V12.4854H12.297V2.39516L0.994515 13.6977L0 12.7037L11.3031 1.40065H1.21221V0Z" fill="black" />
+                                </svg> -->
+                            </div>
+                        </a>
+                    </button>
     
-                    <div class="nav__btn-set">
-                        <button class="nav__btn ">
-                            <a href="#!" class="button">
-                                <span class="button-text">Order Now</span>
-                                <div class="nav__btn-img">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.21221 0H13.6977V12.4854H12.297V2.39516L0.994515 13.6977L0 12.7037L11.3031 1.40065H1.21221V0Z" fill="black" />
-                                    </svg>
-                                </div>
-                            </a>
-                        </button>
-        
-                        <!-- Mobile button open -->
-                        <!-- <button class="mobile-nav-btn">
-                            <div class="mobile-nav-btn__icon"> -->
-                                <!-- Если используются разные кнопки для откр/закр -->
-                                <!-- <img class="nav-img" src="./img/ui/menu_right.svg" alt="Menu button" > -->
-                            <!-- </div>
-                        </button> -->
-                    </div>
-                <!-- </div> -->
+                    <!-- Mobile button open -->
+                    <!-- <button class="mobile-nav-btn">
+                        <div class="mobile-nav-btn__icon"> -->
+                            <!-- Если используются разные кнопки для откр/закр -->
+                            <!-- <img class="nav-img" src="./img/ui/menu_right.svg" alt="Menu button" > -->
+                        <!-- </div>
+                    </button> -->
+                </div>
             </nav>
+        </div>
+    </div>
+
+    <div class="hero">
+        <!-- <div class="container container--wide">
+            <nav class="nav">
+                <a href="index.html" class="nav__logo">
+                    <img src="./img/logo/logo.png" srcset="./img/logo/logo@2x.png 2x" alt="Logo">
+                </a>
+
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#!" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="#!" class="nav__link">Features</a></li>
+                    <li class="nav__item"><a href="#!" class="nav__link">Gear Shop</a></li>
+                </ul>
+                
+                <div class="nav__btn-set">
+                    <button class="nav__btn ">
+                        <a href="#!" class="button">
+                            <span class="button-text">Order Now</span>
+                            <div class="nav__btn-img">
+                                <svg class="icon--arrow-right-top">
+                                    <use href="#arrow-right-top"></use>
+                                </svg>-->
+                            <!-- <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.21221 0H13.6977V12.4854H12.297V2.39516L0.994515 13.6977L0 12.7037L11.3031 1.40065H1.21221V0Z" fill="black" />
+                            </svg> -->
+                        <!--</div>
+                        </a>
+                    </button>-->
+    
+                    <!-- Mobile button open -->
+                    <!-- <button class="mobile-nav-btn">
+                        <div class="mobile-nav-btn__icon"> -->
+                            <!-- Если используются разные кнопки для откр/закр -->
+                            <!-- <img class="nav-img" src="./img/ui/menu_right.svg" alt="Menu button" > -->
+                        <!-- </div>
+                    </button> -->
+                <!--</div>
+            </nav>
+        </div> -->
+
+        <!-- PICTURE -->
+        <div class="container">
+            <!-- Версия с одним фото (текст + картинка) -->
+            <div class="hero__picture none">
+                <img src="./img/hero/content.png" srcset="./img/hero/content@2x.png 2x" alt="Content">
+            </div>
+
+            <!-- Версия с текстом и картинкой -->
+            <div class="hero__picture">
+                <div class="figure">
+                    <div class="figure__line-1">SMOOTH</div>
+                    <div class="figure__line-2">EV CARS</div>
+                    <img class="figure__img" src="./img/hero/hero-img.png" srcset="./img/hero/hero-img@2x.png 2x" alt="Content">
+                </div>
+            </div>
+
+            <div class="hero__details">
+                <div class="detail">
+                    <div class="detail__value">14M</div>
+                    <div class="detail__desc">Battery Cost Reduction</div>
+                </div>
+                <div class="detail">
+                    <div class="detail__value">89%</div>
+                    <div class="detail__desc">Battery Cost Reduction</div>
+                </div>
+                <div class="detail">
+                    <div class="detail__value">1.2M</div>
+                    <div class="detail__desc">Charging infrastructure Expansion</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -93,8 +172,15 @@
         </button> -->
 
          <div class="nav__btn-set">
-            <button class="nav__btn">
-                <a href="#!" class="btn">Book</a>
+            <button class="nav__btn ">
+                <a href="#!" class="button">
+                    <span class="button-text">Order Now</span>
+                    <div class="nav__btn-img">
+                        <svg class="icon--arrow-right-top">
+                            <use href="#arrow-right-top"></use>
+                        </svg>
+                    </div>
+                </a>
             </button>
 
             <!-- Mobile button open -->
@@ -104,14 +190,14 @@
         </div>
 
         <ul class="mobile-nav-list">
-            <li class="mobile-nav-item"><a href="#!" class="mobile-nav-link">Home</a></li>
-            <li class="mobile-nav-item"><a href="#!" class="mobile-nav-link">About</a></li>
-            <li class="mobile-nav-item"><a href="#!" class="mobile-nav-link">Services</a></li>
-            <li class="mobile-nav-item"><a href="#!" class="mobile-nav-link">Contact</a></li>
+            <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li class="mobile-nav-item"><a href="#!" class="mobile-nav-link">Products</a></li>
+            <li class="mobile-nav-item"><a href="#!" class="mobile-nav-link">Features</a></li>
+            <li class="mobile-nav-item"><a href="#!" class="mobile-nav-link">Gear Shop</a></li>
         </ul>
 
-        <a href="#!" class="nav__logo">
-            <img src="./img/logo.svg" alt="Logo Powfections">
+        <a href="index.html" class="nav__logo">
+            <img src="./img/logo/logo.png" srcset="./img/logo/logo@2x.png 2x" alt="Logo">
         </a>
     </div>
 

@@ -1,6 +1,6 @@
 # HTML CSS Вёрстка сайта EV Cars
 
-Вёрстка лендинга, адаптив. HTML, CSS
+Вёрстка лендинга, адаптив. HTML, CSS, JS
 
 ***Макет Figma***: [https://www.figma.com/design/AMBa6eLIYQowg3CbLpNCec/](https://www.figma.com/design/AMBa6eLIYQowg3CbLpNCec/)
 
@@ -12,14 +12,33 @@
 - SCSS,
 - JS,
 - Мобильная адаптация
-- Дизайн-система (UI Kit)
 - Компонентный подход
 
-##### Установить зависимости:
+##### Если глифы фонта разной высоты, делаем одной:
 
-```bash
-npm i
+```CSS
+.detail__value {
+    font-variant-numeric: lining-nums tabular-nums;
+}
 ```
+
+##### Обводка текста:
+
+```CSS
+.stroked-text {
+  /* Толщина и цвет обводки */
+  -webkit-text-stroke: 2px #000000;
+  /* Цвет внутри букв (transparent делает текст "контурным") */
+  -webkit-text-fill-color: transparent;
+  /* Стандартные свойства шрифта */
+  font-size: 48px;
+  font-weight: bold;
+}
+```
+
+[-webkit-text-stroke CSS property (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke)
+
+Для создания идеального контура можно комбинировать эту технику с тенями через `text-shadow`
 
 #### Fonts
 
@@ -35,37 +54,6 @@ npm i
 При подключении только внешних шрифтов, `src/fonts` оставить пустым.
 
 Либо, положить в папку `src/files/fonts`. Вообще, все любые дополнительные файлы (pdf, dbf...) можно ложить в `src/files/` и они попадут в `build/files/`
-
-##### Images
-
-Обязательно добавить `{ encoding: false }` в путь источника, т.к. начиная с GULP 5.0 изображение по-умолчанию передается текстовой строкой
-`.pipe(src(path.source.img, { encoding: false }))`
-
-[`gulp-picture-html`](https://github.com/WpWebr/gulp-picture-html) - расширение для Gulp, создает для html `<img>` стэк `<picture>`
-
-###### Например
-
-```html
-// Изменяет тэг 'img'
-  <img src="img/image.jpg" alt="image">
-```
-
-```html
-// на 'picture'
-<picture>
-    <source srcset="img/image.avif" type="image/avif">
-    <source srcset="img/image.webp" type="image/webp">
-    <img src="img/image.jpg" alt="image">
-</picture>
-```
-
-##### Svg Sprite
-
-Собирает svg в './docs/img/svgsprite'
-`gulp sprite` - в 'sprite.symbol.svg'
-`gulp stack` - в 'sprite.stack.svg'
-
-[GitHub сборка:](https://github.com/Kovalchuk-Alexandr/Gulp-v04-2025.git)
 
 ### Выравнивание размеров карточек card-review
 

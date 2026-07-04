@@ -1,0 +1,40 @@
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 16px 22px;
+}
+
+.detail__value {
+    font-weight: 600;
+    font-size: 80px;
+    font-size: clamp(1.5rem, 0.227rem + 6.36vw, 5rem);
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-variant-numeric: lining-nums tabular-nums;
+}
+
+.detail__desc {
+    max-width: 15ch;
+    font-weight: 400;
+    font-size: 24px;
+    font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+    color: var(--subtext-color);
+}
+
+@media (max-width: 980px) {
+    .detail {
+        flex-direction: column;
+    }
+    .detail__desc {
+        text-align: center;
+    }
+}
+
+@media (max-width: 580px) {
+    .detail {
+        flex-direction: row;
+    }
+    .detail__desc {
+        text-align: center;
+    }
+}

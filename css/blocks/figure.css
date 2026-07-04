@@ -1,0 +1,62 @@
+.figure {
+    position: relative;
+    font-weight: 600;
+    font-size: 236px;
+    font-size: 16vw;
+    font-size: clamp(3.125rem, -1.102rem + 21.14vw, 14.75rem);
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.figure__line-1 {
+    /* Толщина и цвет обводки */
+  -webkit-text-stroke: 5px var(--primary-color);
+  /* Цвет внутри букв (transparent делает текст "контурным") */
+  /* -webkit-text-fill-color: transparent; */
+  /* -webkit-text-fill-color: var(--primary-color); */
+    color: var(--primary-color);
+    margin-bottom: clamp(0.625rem, -0.284rem + 4.55vw, 3.125rem);
+}
+
+.figure__line-2 {
+    -webkit-text-stroke: 5px var(--background-color-3);
+    color: var(--background-color-3);
+    white-space: nowrap;
+}
+
+.figure__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 56vw; */
+    width: clamp(11.125rem, -2.853rem + 69.89vw, 51.313rem);
+}
+
+@media (max-width: 768px) {
+    .figure__line-1 {
+        -webkit-text-stroke: 3px var(--primary-color);
+    }
+
+    .figure__line-2 {
+        -webkit-text-stroke: 3px var(--background-color-3);
+    }
+}
+@media (max-width: 500px) {
+    .figure__line-1 {
+        -webkit-text-stroke: 3px var(--primary-color);
+    }
+
+    .figure__line-2 {
+        -webkit-text-stroke: 3px var(--background-color-3);
+    }
+}
+@media (max-width: 400px) {
+    .figure__line-1 {
+        -webkit-text-stroke: 1px var(--primary-color);
+    }
+
+    .figure__line-2 {
+        -webkit-text-stroke: 1px var(--background-color-3);
+    }
+}

@@ -1,27 +1,32 @@
+.nav__wrapper {
+    position: fixed;
+    top: 32px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
 .nav {
+    /* top: 32px;
+    position: fixed; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
     
-    border-radius: 10px;
+    /* margin-bottom: 98px; */
     padding: 18px;
     height: 100px;
+
+    border-radius: 10px;
 
     -webkit-backdrop-filter: blur(23px);
     backdrop-filter: blur(23px);
     background: var(--white-transparent-1);
 }
 
-.nav__row {
-    display: grid;
-    grid-template-columns: 1fr minmax(416px, 1fr) 1fr;
-    align-items: center;
-    gap: 30px;
-}
-
 .nav__list {
-    padding: 8px 12px;
+    /* padding: 8px 12px; */
 
     justify-self: start;
 
@@ -34,6 +39,9 @@
 
 .nav__link {
     position: relative;
+
+    padding: 8px 12px;
+
     text-decoration: none;
     
     font-family: var(--font-family);
@@ -61,8 +69,7 @@
 }
 
 .nav__logo {
-    text-align: center;
-    justify-self: center;
+    flex-shrink: 0;
 }
 
 .nav__btn {
@@ -77,43 +84,41 @@
 }
 
 .nav__btn-set {
-    display: flex;
+    /* display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 20px; */
+    /* padding-right: 80px; */
 }
 
 
 /* Media */
-@media (max-width: 1049px) {
-    /* .nav {padding-bottom: 80px;}
-
-    .nav__row {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        align-items: center;
-    } */
+@media (max-width: 980px) {
+    /* .nav {padding-bottom: 80px;}*/
+    .nav__list {display: none;}
+    .nav__btn-set {
+        padding-right: 80px;
+    }
+    
 }
 
-@media (max-width: 480px) {
-    .nav {padding: 30px; padding-bottom: 60px;}
-
-    .nav__row {
-        flex-direction: column-reverse;
-        gap: 30px;
+@media (max-width: 580px) {
+    .nav {
+        padding: 12px;
     }
+
+    .nav__btn {display: none;}
 
     .nav__list {display: none;}
 
     .nav__logo {
-        width: 260px;
-        height: 19px;
+        width: 180px;
     }
-    .nav__btn-set {
-        flex-direction: row;
-        width: 100%;
-        min-width: 260px;
+}
+
+@media (max-width: 420px) {
+    .nav__logo {
+        width: 160px;
     }
 }

@@ -5,6 +5,7 @@
 @import './base/reset.css';
 @import './base/vars.css';
 @import './base/base.css';
+@import './base/icons.css';
 @import './base/buttons.css';
 @import './base/mobile-nav-button.css';
 @import './base/mobile-nav.css';
@@ -12,8 +13,10 @@
 
 
 /* =============  Blocks ================= */
-@import './blocks/hero.css';
 @import './blocks/nav.css';
+@import './blocks/hero.css';
+@import './blocks/detail.css';
+@import './blocks/figure.css';
 @import './blocks/header.css';
 @import './blocks/footer.css';
 

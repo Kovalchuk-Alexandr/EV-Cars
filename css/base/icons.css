@@ -37,6 +37,12 @@
 	/* height: 262px; */
 }
 
+.icon--arrow-right-top {
+	width: 14px;
+	height: 14px;
+	fill: var(--primary-color);
+}
+
 @media (max-width: 550px) {
 	.icon{
 		/* width: 178px; */
