@@ -11,14 +11,18 @@
 @import './base/mobile-nav.css';
 @import './base/swiper.css';
 
+/* =============  Sections =============== */
+@import './sections/hero.css';
+@import './sections/features.css';
 
 /* =============  Blocks ================= */
 @import './blocks/nav.css';
-@import './blocks/hero.css';
 @import './blocks/detail.css';
 @import './blocks/figure.css';
-@import './blocks/header.css';
+@import './blocks/section-title.css';
 @import './blocks/footer.css';
+
+
 
 /* =============  Media ================= */
 /* @import './base/media.css'; */
