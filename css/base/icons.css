@@ -43,6 +43,24 @@
 	fill: var(--primary-color);
 }
 
+.icon--btn-play {
+	width: 64px;
+	height: 64px;
+
+	outline: 1px solid rgba(16, 16, 16, 0.6);
+	outline: 1px solid #E9FF61;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in;
+}
+
+.icon--btn-play:active, .icon--btn-play--active,
+.icon--btn-play:hover {
+    box-shadow: inset 0px 0px 20px rgba(167, 167, 167, 0.9);
+    outline: 1px solid rgba(168, 168, 168, 0.25);
+	outline: 1px solid #cddf59b6;
+	transform: scale(0.93);
+}
+
 @media (max-width: 550px) {
 	.icon{
 		/* width: 178px; */

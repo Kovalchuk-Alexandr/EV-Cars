@@ -1,10 +1,35 @@
 .features {
     padding-block: 128px;
+    padding-block: clamp(1.875rem, -0.352rem + 11.14vw, 8rem);
+    background: var(--background-color-1);
 }
 
 .features__header {
     margin-bottom: 45px;
+    margin-bottom: clamp(1.25rem, 0.682rem + 2.84vw, 2.813rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
 .features__grid {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+}
+
+@media (max-width: 800px) {
+    .features__grid {
+        column-gap: 10px;
+    }
+}
+@media (max-width: 500px) {
+    .features__grid {
+        grid-template-columns: 1fr;
+    }
 }

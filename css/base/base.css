@@ -68,30 +68,3 @@ body {
     justify-content: space-between;
 }
 
-.title-1 {
-    color: #161414;
-    font-size: 32px;
-    font-weight: 600;
-}
-
-.title-2 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 60px;
-    font-size: clamp(2rem, 1.391rem + 3.04vw, 3.75rem);
-    text-transform: capitalize;
-    color: var(--primary-color);
-    text-align: center;
-}
-
-@media (max-width: 1130px) {
-    .title-1 {
-        font-size: 26px;
-    }
-}
-
-@media (max-width: 440px) {
-    .title-1 {
-        text-align: center;
-    }
-}

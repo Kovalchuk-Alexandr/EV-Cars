@@ -16,6 +16,10 @@
         <symbol id="arrow-right-top" width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
             <path d="M1.21221 0H13.6977V12.4854H12.297V2.39516L0.994515 13.6977L0 12.7037L11.3031 1.40065H1.21221V0Z"/>
         </symbol>
+        <symbol id="btn-play" width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <path d="M0 0H64V64H0V0Z" fill="#E9FF61" />
+            <path d="M17 14L47 32L17 50V14Z" fill="black" />
+        </symbol>
     </svg>
 
     <div class="nav__wrapper">
@@ -38,7 +42,7 @@
                             <span class="button-text">Order Now</span>
                             <div class="nav__btn-img">
                                 <svg class="icon--arrow-right-top">
-                                    <use href="#arrow-right-top"></use>
+                                    <use href="./img/svgsprite/sprite.svg#arrow-right-top"></use>
                                 </svg>
                                 <!-- <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1.21221 0H13.6977V12.4854H12.297V2.39516L0.994515 13.6977L0 12.7037L11.3031 1.40065H1.21221V0Z" fill="black" />
@@ -184,13 +188,107 @@
      <section class="features">
         <div class="container">
 
-            <header class="features__header section-title">
-                <div class="section-title__tag">Versatile Power</div>
-                <h2 class="section-title__title title-2">Discover Our Multi-functional chargers</h2>
+            <header class="features__header">
+                <div class="tag">Versatile Power</div>
+                <h2 class="title-2">Discover Our Multi-functional chargers</h2>
             </header>
 
             <div class="features__grid">
-                <div class="card"></div>
+                <!-- Card 1  -->
+                <article class="card">
+                    <img class="card__img" src="./img/features/01.jpg" srcset="./img/features/01@2x.jpg 2x" alt="Home Smart Charger">
+                    <div class="card__content">
+                        <h3 class="card__title">Home Smart Charger</h3>
+                        <p class="card__desc">A lightweight, travel-friendly Level 1 charger designed for convenience. Plugs into standard wall outlets.</p>
+                        <div class="card__price-wrapper">
+                            <span class="card__old-price">$999</span>
+                            <span class="card__price">$599</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 2  -->
+                <article class="card">
+                    <img class="card__img" src="./img/features/02.jpg" srcset="./img/features/02@2x.jpg 2x" alt="Home Smart Charger">
+                    <div class="card__content">
+                        <h3 class="card__title">Portable EV Charger</h3>
+                        <p class="card__desc">A lightweight, travel-friendly Level 1 charger designed for convenience. Plugs into standard wall outlets.</p>
+                        <div class="card__price-wrapper">
+                            <span class="card__old-price">$999</span>
+                            <span class="card__price">$599</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 3  -->
+                <article class="card">
+                    <img class="card__img" src="./img/features/03.jpg" srcset="./img/features/03@2x.jpg 2x" alt="Home Smart Charger">
+                    <div class="card__content">
+                        <h3 class="card__title">Ultra-Fast Public Charging Station</h3>
+                        <p class="card__desc">A high-power Level 3 DC fast charger for public and commercial locations. Equipped with dual ports.</p>
+                        <div class="card__price-wrapper">
+                            <span class="card__old-price">$999</span>
+                            <span class="card__price">$599</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+     </section>
+
+     <section class="story">
+        <div class="container--wide">
+            <header class="story__header">
+                <div class="tag">Our Story</div>
+                 <div class="story__header-title-wrapper">
+                     <h2 class="title-2">Powering a Greener Future,<br> One Drive at a Time</h2>
+                     <p class="story__header-desc text">We are here to support your journey towards sustainable driving. Explore cutting-edge EV technology, a growing charging network, and exclusive resources designed to enhance your electric vehicle experience.</p>
+                 </div>
+            </header>
+            <div class="story__grid">
+                <article class="card-media">
+                    <div class="card-media__video-wrapper">
+                        <img class="card-media__img" src="./img/story/video.jpg" srcset="./img/story/video@2x.jpg 2x" alt="Card video">
+                        <button class="card-media__play-btn" title="Play video">
+                            <svg class="icon--btn-play">
+                                <use href="./img/svgsprite/sprite.svg#btn-play"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card-media__content">
+                        <h3 class="card-media__title title-5">Join a Connected Charging Network</h3>
+                        <p class="card-media__desc text">Be part of a growing network of EV drivers who share a passion for sustainability and innovation.</p>
+                    </div>
+                </article>
+                
+                <article class="card-story">
+                    <div class="card-story__bg">
+                        <img class="card-story__bg-img" src="./img/story/story-bg.jpg" srcset="./img/story/story-bg@2x.jpg 2x" alt="Card story BG">
+                    </div>
+
+                    <div class="card-story__content-wrapper">
+                        <div class="card-story__content">
+                            <h3 class="card-story__title title-5">Empowering Your EV Journey</h3>
+                            <p class="card-story__desc text">Discover the latest in electric vehicle technology, from cutting-edge chargers to innovative features that make your driving experience seamless and enjoyable.</p>
+                        </div>
+
+                        <a href="#!" class="card-story__btn button button-2">
+                            <span class="button-text">Our Story</span>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+     </section>
+
+     <section class="power">
+        <div class="container--wide">
+            <header class="power__header">
+                <div class="tag tag--dark">Versatile Power</div>
+                <h2 class="title-2">Revolutionizing EV Mobility</h2>
+            </header>
+
+            <div class="power__grid">
+                Content
             </div>
         </div>
      </section>

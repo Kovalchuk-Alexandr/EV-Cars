@@ -25,6 +25,13 @@
     transition: all 0.3s ease-in;
 }
 
+.button-2 {
+    appearance: none;
+    padding: 12px 38px;
+    width: 151px;
+    height: 46px;
+}
+
 .button:active, .button--active {
     box-shadow: inset 0px 0px 5px rgba(167, 167, 167, 0.3);
 }

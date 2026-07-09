@@ -1,0 +1,27 @@
+.tag {
+    display: inline-block;
+    padding: 10px 20px;
+    /* width: 162px;
+    height: 42px; */
+    background: var(--background-color-2);
+
+    font-weight: 400;
+    font-size: 18px;
+    font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
+    text-align: center;
+    white-space: nowrap;
+    color: var(--primary-color);
+}
+
+.tag--dark {
+    color: var(--background-color-1);
+    background: var(--white-transparent-2);
+
+}
+
+@media (max-width: 580px) {
+    .tag {
+        padding: 8px 14px;
+    }
+    
+}

@@ -13,6 +13,7 @@
 - JS,
 - Мобильная адаптация
 - Компонентный подход
+- SVG-sprite
 
 ##### Если глифы фонта разной высоты, делаем одной:
 
@@ -40,20 +41,73 @@
 
 Для создания идеального контура можно комбинировать эту технику с тенями через `text-shadow`
 
-#### Fonts
+#### sprite.svg - создание
 
-Конвертация шрифтов OTF->TTF, TTF->WOFF, WOFF->WOFF2 с копией в `src/fonts`.
-Если, только WOFF/Woff2 - копируются в `build`
+1. создаем файл `touch "./img/svgsprite/sprite.svg"`
+2. в файле `sprite.svg` создаем шапку
 
-Все шрифты автоматически собираются в "src\scss\base\_fontsAutoGen.scss".
-При этом, важно! Название - плотность - курсив разделять пробелами
+```HTML
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="arrow-right-top" width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M1.21221 0H13.6977V12.4854H12.297V2.39516L0.994515 13.6977L0 12.7037L11.3031 1.40065H1.21221V0Z" fill="black" />
+    </symbol>
 
-- `Montserrat-Bold-Italic.ttf`
-- `Inter-Regular.ttf`
+    <symbol id="btn-play" width="64" height="64" viewBox="0 0 64 64" fill="none">
+        <path d="M0 0H64V64H0V0Z" fill="#E9FF61" />
+        <path d="M17 14L47 32L17 50V14Z" fill="black" />
+    </symbol>
+</svg>
+```
 
-При подключении только внешних шрифтов, `src/fonts` оставить пустым.
+3. Если не в отдельном файле, а в самой разметке `HTML` то добавляем стиль `style="display: none;"`
 
-Либо, положить в папку `src/files/fonts`. Вообще, все любые дополнительные файлы (pdf, dbf...) можно ложить в `src/files/` и они попадут в `build/files/`
+```html
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    ...
+</svg>
+```
+
+4. в самой иконке тэг `<svg>` заменяем на `<symbol>`
+5. Использование:
+
+```html
+<svg class="icon--arrow-right-top">
+    <use href="./img/svgsprite/sprite.svg#arrow-right-top"></use>
+</svg>
+```
+
+### Наложение цвета поверх фонового изображения
+
+Для наложения цвета поверх фонового изображения в CSS используют два основных способа: комбинирование слоев с помощью `background` или применение `background-blend-mode`. Это позволяет добиться эффекта тонирования или создания полупрозрачных фильтров для улучшения читаемости текста
+
+1. Объявление цвета и картинки через запятую
+
+Самый кроссбраузерный способ наложения, при котором цвет указывается первым слоем, а фоновое изображение — вторым
+  
+```CSS
+.element {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('image.jpg');
+  background-size: cover;
+}
+```
+
+Здесь `linear-gradient` используется для создания цветного фильтра с нужной прозрачностью поверх изображения.
+
+2. Использование `background-blend-mode`
+
+Если нужны более сложные эффекты наложения (осветление, затемнение, умножение) между несколькими фонами, применяется следующее свойство
+
+```CSS
+.element {
+  background-color: #ff0000; /* Красный цвет фона */
+  background-image: url('image.jpg');
+  background-blend-mode: multiply; /* Режим наложения */
+  background-size: cover;
+}
+```
 
 ### Выравнивание размеров карточек card-review
 

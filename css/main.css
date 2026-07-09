@@ -14,12 +14,19 @@
 /* =============  Sections =============== */
 @import './sections/hero.css';
 @import './sections/features.css';
+@import './sections/story.css';
+@import './sections/power.css';
 
 /* =============  Blocks ================= */
 @import './blocks/nav.css';
 @import './blocks/detail.css';
 @import './blocks/figure.css';
 @import './blocks/section-title.css';
+@import './blocks/card.css';
+@import './blocks/tag.css';
+@import './blocks/title.css';
+@import './blocks/card-media.css';
+@import './blocks/card-story.css';
 @import './blocks/footer.css';
 
 
