@@ -13,6 +13,12 @@
     color: var(--primary-color);
     text-align: center;
 }
+.title-4 {
+    font-weight: 400;
+    font-size: 42px;
+    font-size: clamp(1.625rem, 1.261rem + 1.82vw, 2.625rem);
+    color: var(--background-color-1);
+}
 .title-5 {
     font-family: var(--font-family);
     font-weight: 400;
@@ -27,6 +33,9 @@
     font-size: 18px;
     font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
     color: var(--subtext-color);
+}
+.title--dark {
+    color: var(--background-color-1);
 }
 
 @media (max-width: 1130px) {

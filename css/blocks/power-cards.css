@@ -1,0 +1,137 @@
+.power__col1 {
+   
+}
+.power__col1-heading {
+    margin-bottom: 22px;
+    padding: 32px;
+    background: var(--white-transparent-2);
+}
+.power__col1-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 7px;
+}
+.power__col1-title {
+    max-width: 9ch;
+}
+.power__col1-logo {
+}
+.power__col1-text {
+    margin-bottom: 26px;
+
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--secondary-color);
+}
+.power__col1-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--background-color-3);
+}
+.power__users {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.power__users-img {
+    width: 53px;
+    flex-shrink: 0;
+}
+.power__users-info {
+    /* font-weight: 400;
+    font-size: 18px;
+    color: var(--background-color-3); */
+}
+.power__rate {
+    padding: 5px 12px;
+    background: var(--white-transparent-2);
+}
+.power__col1-grid {
+    display: grid;
+     /* grid-template-areas: 
+    "card1 card2"
+    "card1 card3"; */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+.power__col1-card1 {
+    /* grid-area: card1; */
+    grid-row: span 2;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    
+    background-image: url("../../img/power/card1-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.power__col1-card2 {
+    /* grid-area: card2; */
+    width: 100%;
+}
+.power__col1-card3 {
+    display: grid;
+    gap: 40px;
+    padding: 24px;
+}
+
+/* CARD 1*/
+.power__card1-counter {
+    display: grid;
+    gap: 16px;
+}
+.power__counter-number {
+    font-weight: 600;
+    font-size: 80px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-variant-numeric: lining-nums tabular-nums;
+}
+.power__counter-miles {
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+/* CARD 3*/
+.power__card3-text.text {
+    color: var(--background-color-3);
+}
+
+@media (max-width: 992px) {
+    .power__card1-counter {gap: 10px;}
+    .power__counter-number {
+        font-size: 56px;
+    }
+    .power__counter-miles {
+        font-size: 20px;
+    }
+}
+@media (max-width: 860px) {
+    .power__col1-card3 {gap: clamp(0.938rem, 0.012rem + 4.63vw, 2.5rem);}
+}
+
+@media (max-width: 500px) {
+    .power__col1-grid {
+        grid-template-columns: 1fr;
+    }
+    .power__col1-card1 {
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 460px) {
+    .power__col1-heading {padding: 16px;}
+}

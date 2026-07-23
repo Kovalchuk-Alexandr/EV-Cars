@@ -16,7 +16,12 @@
 .tag--dark {
     color: var(--background-color-1);
     background: var(--white-transparent-2);
+}
 
+.tag-small--dark {
+    padding: 6px 10px;
+    color: var(--background-color-1);
+    background: var(--primary-color);
 }
 
 @media (max-width: 580px) {

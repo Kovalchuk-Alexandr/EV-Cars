@@ -11,31 +11,7 @@
 	height: 262px; 
 }
 
-.icon-decor {}
 
-.icon--cat-01 {
-	aspect-ratio: 1.082;
-	/* width: 264px; */
-	/* height: 244px; */
-}
-
-.icon--cat-02 {
-	aspect-ratio: 1.187;
-	/* width: 286px; */
-	/* height: 241px; */
-}
-
-.icon--cat-03 {
-	aspect-ratio: 1.004;
-	/* width: 248px; */
-	/* height: 247px; */
-}
-
-.icon--doggy {
-	aspect-ratio: 0.947;
-	/* width: 248px; */
-	/* height: 262px; */
-}
 
 .icon--arrow-right-top {
 	width: 14px;
@@ -53,6 +29,11 @@
     transition: all 0.3s ease-in;
 }
 
+.icon--logo {
+	width: 74px;
+	height: 74px;
+}
+
 .icon--btn-play:active, .icon--btn-play--active,
 .icon--btn-play:hover {
     box-shadow: inset 0px 0px 20px rgba(167, 167, 167, 0.9);
@@ -61,10 +42,20 @@
 	transform: scale(0.93);
 }
 
+.icon--battery {
+	width: 38px;
+	height: 61px;
+	fill: var(--background-color-1);
+}
+
 @media (max-width: 550px) {
 	.icon{
 		/* width: 178px; */
-		height: 188px;
+		/* height: 188px; */
+	}
+	.power__col1-logo .icon--logo {
+		width: 48px;
+		height: 48px;
 	}
 }
 

@@ -3,7 +3,7 @@ font-family: "Syne", sans-serif;
 */
 
 * {
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
 }
 
 html {
@@ -66,5 +66,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media (max-width: 460px) {
+    .container--wide {padding-inline: 10px;}
 }
 
